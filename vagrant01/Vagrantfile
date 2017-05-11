@@ -30,8 +30,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # /var/www/html : directorio en la maquina virtual recien creada
 
 
-  # Script para instalar y provisionar:  run.sh
-  config.vm.provision "shell", path: "run.sh"
+  # Script para instalar y provisionar:  bootstrap.sh
+  config.vm.provision "shell", path: "bootstrap.sh"
 
 
   # Configuro el hardware de la VM
