@@ -16,3 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
 end
 </pre>
+
+
+Falta documentar...
