@@ -35,15 +35,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   # Configuro el hardware de la VM
-  config.vm.provider :virtualbox do |vb|
+  config.vm.provider :virtualbox do |virtualbox|
 	# Nombre de la máquina virtual
-    vb.name = 'developerlover'
+    virtualbox.name = 'developerlover'
 	# Memoria
-    vb.memory = 512
+    virtualbox.memory = 512
     # Número de procesadores
-    vb.cpus = 1
-    end
-end
+    virtualbox.cpus = 1
+	  
+    end # end.vb
+end # end.config
 
 # ssh login
 # user: vagrant
