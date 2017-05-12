@@ -10,6 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # auto_correct: true  =>  Vagrant corrige cualquier tipo de colicion
   # y manda un mensaje  https://www.vagrantup.com/docs/networking/forwarded_ports.html
   config.vm.network "forwarded_port", guest: 80, host: 8088,  protocol: "tcp", auto_correct: "true"
+  config.vm.network "forwarded_port", guest: 3306, host: 33061,  protocol: "tcp", auto_correct: "true"
   # Configurar una red privada con ip fija
   # De esta manera podria acceder a mi nueva vm de la siguiente manera:
   # opcion1:   http://127.0.0.1:8088
