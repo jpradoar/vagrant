@@ -14,3 +14,12 @@
     - nmap
     - net-tools
     - unzip
+    - ntp
+    - mlocate
+    - tcpdump
+    - telnet
+    - iftop
+    - iotop
+    - sysstat
+    - tcpdump
+    - traceroute
