@@ -4,7 +4,7 @@ Vagrant by HashiCorp
 En cada directorio hay una prueba distinta
 - vagrant01: VM simple con un script en bash para la instalación de un webserver básico.
 - vagrant02: VM simple con ansible para levantar un webserver base
-
+- vagrant03: VM ubuntu con ansible + clon repo git + crud listo para usar
 
 # Config base
 <pre>

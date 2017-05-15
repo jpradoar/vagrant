@@ -1,0 +1,26 @@
+---
+
+#file: /roles/mysql/tasks/main.yml
+
+- name: Job(005) install mysql server and client
+  apt: name={{item}} state=present
+  with_items:
+    - mysql-server
+    - mysql-client
+    - python-mysqldb
+
+- name: Job(006) Creating database crud1
+  mysql_db:
+    name: crud1
+    state: present
+
+- mysql_user: 
+    name: mysql_user
+    password: mysql_pass
+    priv: '*.*:ALL'
+    state: present
+
+# Set the locale as Argentina
+- locale_gen:
+    name: es_AR.UTF-8
+    state: present  

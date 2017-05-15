@@ -1,0 +1,13 @@
+---
+#file: /roles/software/tasks/main.yml
+ 
+- git:
+    repo: 'github.repo.git'
+    dest: /var/www/html/crud
+    force: yes
+
+- name: Job(012) Import database from a dump
+  mysql_db:
+    state: import
+    name: database_name
+    target: /var/www/html/crud/dump.sql

@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: yes
+
+  tasks:
+  
+  roles:
+     - paquetes_basicos
+     - apache
+     - php
+     - mysql
+     - software
+
