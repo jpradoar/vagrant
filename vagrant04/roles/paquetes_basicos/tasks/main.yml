@@ -1,0 +1,20 @@
+---
+
+#file: /roles/dependencies/tasks/main.yml
+
+- name: Job(001) install packages
+  apt: name={{item}} state=present
+  with_items:
+    - git
+#    - nmap
+#    - vim
+#    - curl
+#    - wget
+#    - strace
+#    - net-tools
+#    - unzip
+#    - htop
+#    - iotop
+#    - iftop
+#    - mlocate
+#    - openssh-server 
