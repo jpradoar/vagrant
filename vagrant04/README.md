@@ -1,5 +1,3 @@
-# Vagrant04
-
 # Vagrant con un playbook de ansible para instalar:  LAMP + CRUD 100% funcional
 
 
