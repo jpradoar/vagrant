@@ -1,9 +1,10 @@
 # Vagrant04
 
-Vagrant con un playbook de ansible para instalar:
- LAMP + CRUD 100% funcional
+# Vagrant con un playbook de ansible para instalar:  LAMP + CRUD 100% funcional
 
 
+<pre>
+vagrant up
 
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'ubuntu/trusty64'...
@@ -80,4 +81,4 @@ changed: [default]
 
 PLAY RECAP *********************************************************************
 default                    : ok=10   changed=9    unreachable=0    failed=0   
-
+</pre>
