@@ -90,5 +90,6 @@ default                    : ok=11   changed=8    unreachable=0    failed=0
 # Finally the result is this
 
 <p align="center">
+<br>
   <img src="screen01.png"/><br>
 </p>
