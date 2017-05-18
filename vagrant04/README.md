@@ -7,7 +7,7 @@ vagrant up
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'ubuntu/trusty64'...
 ==> default: Matching MAC address for NAT networking...
-==> default: Setting the name of the VM: vagrant04_default_1494896264532_96358
+==> default: Setting the name of the VM: vagrant04_default_1495112665502_60031
 ==> default: Clearing any previously set forwarded ports...
 ==> default: Clearing any previously set network interfaces...
 ==> default: Preparing network interfaces based on configuration...
@@ -23,6 +23,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: SSH address: 127.0.0.1:2221
     default: SSH username: vagrant
     default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
 ==> default: Machine booted and ready!
 ==> default: Checking for guest additions in VM...
     default: The guest additions on this VM do not match the installed version of
@@ -50,19 +51,22 @@ PLAY ***************************************************************************
 TASK [setup] *******************************************************************
 ok: [default]
 
-TASK [paquetes_basicos : Job(001) install packages] ****************************
-changed: [default] => (item=[u'git'])
+TASK [paquetes_basicos : Run apt-get update] ***********************************
+ok: [default]
 
-TASK [apache : Job(002) install apache2] ***************************************
+TASK [paquetes_basicos : Install list of packages] *****************************
+changed: [default] => (item=[u'vim', u'git', u'nmap', u'curl', u'wget', u'strace', u'net-tools', u'unzip', u'htop', u'iotop', u'iftop', u'mlocate', u'openssh-server'])
+
+TASK [apache : Install apache2] ************************************************
 changed: [default]
 
-TASK [php : Job(004) install php] **********************************************
+TASK [php : install PHP] *******************************************************
 changed: [default] => (item=[u'php5-cli', u'php5-curl', u'php5-fpm', u'php5-intl', u'php5-json', u'php5-mcrypt', u'php-pear', u'libapache2-mod-php5', u'php5-mysql', u'php5-common'])
 
-TASK [mysql : Job(005) install mysql server and client] ************************
+TASK [mysql : Install mysql server and client] *********************************
 changed: [default] => (item=[u'mysql-server', u'mysql-client', u'python-mysqldb'])
 
-TASK [mysql : Job(006) Creating database datos] ********************************
+TASK [mysql : Creating database datos] *****************************************
 changed: [default]
 
 TASK [mysql : mysql_user] ******************************************************
@@ -72,11 +76,11 @@ TASK [mysql : locale_gen] ******************************************************
 changed: [default]
 
 TASK [software : git] **********************************************************
-changed: [default]
+ok: [default]
 
-TASK [software : Job(012) Import database from a dump] *************************
+TASK [software : Import database from a dump] **********************************
 changed: [default]
 
 PLAY RECAP *********************************************************************
-default                    : ok=10   changed=9    unreachable=0    failed=0   
+default                    : ok=11   changed=8    unreachable=0    failed=0 
 </pre>
