@@ -84,3 +84,11 @@ changed: [default]
 PLAY RECAP *********************************************************************
 default                    : ok=11   changed=8    unreachable=0    failed=0 
 </pre>
+
+
+
+# Finally the result is this
+
+<p align="center">
+  <img src="screen01.png"/><br>
+</p>
