@@ -6,6 +6,7 @@ En cada directorio hay una prueba distinta
 - vagrant02: VM simple, provision con ansible para levantar un webserver base
 - vagrant03: Testing/Beta
 - vagrant04: VM ubuntu, provision con ansible + LAMP + CRUD  listo para usar
+- vagrant_phpipam: VM ubuntu, provision con ansible + software phpipam
 
 # Config base
 <pre>
