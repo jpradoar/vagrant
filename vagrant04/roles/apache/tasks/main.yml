@@ -1,6 +1,0 @@
----
-#file: /roles/apache/tasks/main.yml
- 
-- name: Job(002) install apache2
-  apt: name=apache2 state=latest update_cache=yes
-  tags: apache
