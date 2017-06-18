@@ -1,0 +1,18 @@
+---
+#file: /roles/software/tasks/main.yml
+ 
+- git:
+    repo: 'https://github.com/jpradoar/testing.git'
+    dest: /var/www/html/crud
+    force: yes
+
+- name: Job(012) Import database from a dump
+  mysql_db:
+    state: import
+    name: datos
+    target: /var/www/html/crud/datos.sql
+
+# fatal: [default]: FAILED! => {"changed": false, "failed": true, 
+#"msg": "unable to find /root/.my.cnf. Exception message: (1045, 
+# \"Access denied for user 'root'@'localhost' (using password: NO)\")"}
+# 
