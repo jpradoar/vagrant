@@ -1,5 +1,6 @@
-# vagrant
-Vagrant by HashiCorp
+<p align="center">
+  <img src="vagrant.png"/><br>
+</p>
 
 En cada directorio hay una vm lista para usar
 - lamp_base_ansible: Vagrant con un playbook de ansible para instalar apache2 y algunos paquetes básicos.
